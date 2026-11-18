@@ -1,5 +1,8 @@
 # dsh-input-history-recall
 
+[![npm version](https://img.shields.io/npm/v/dsh-input-history-recall.svg)](https://www.npmjs.com/package/dsh-input-history-recall)
+[![license](https://img.shields.io/npm/l/dsh-input-history-recall.svg)](LICENSE)
+
 在 DeepSeek Harness（DSH）Web 输入框里**快速连按两次 ↑/↓**，回溯本会话已发送的消息，像终端历史一样上下翻。
 
 Double-press <kbd>ArrowUp</kbd> / <kbd>ArrowDown</kbd> in the DSH Web composer to walk through this session's sent messages. Single press keeps native cursor movement.
@@ -11,11 +14,11 @@ Double-press <kbd>ArrowUp</kbd> / <kbd>ArrowDown</kbd> in the DSH Web composer t
 
 ## 安装
 
-### 方式一：作为 profile bundle（持久，推荐）
+### 方式一：从 npm 安装（推荐）
 
 ```powershell
 cd "$env:USERPROFILE\.dsh\profiles\desktop"
-npm install github:foreverbelief/dsh-input-history-recall
+npm install dsh-input-history-recall
 ```
 
 然后在同一个 `package.json` 的 `dsh.profile.bundles` 数组里加一项：
@@ -28,7 +31,15 @@ npm install github:foreverbelief/dsh-input-history-recall
 
 > 包内自带 `cordis.patch.yml`，作为 bundle 启动时会自动插入加载行；**不要**再往 profile 的 `cordis.patch.yml` 手动插行，否则会重复注册。
 
-### 方式二：本地开发
+### 方式二：从 GitHub 安装
+
+```powershell
+npm install github:foreverbelief/dsh-input-history-recall
+```
+
+同样加进 `dsh.profile.bundles`。
+
+### 方式三：本地开发
 
 ```powershell
 npm install file:D:/path/to/dsh-input-history-recall
@@ -88,11 +99,11 @@ npm run check   # node --check 两个入口
 
 **What it does.** Double-press <kbd>ArrowUp</kbd> in the composer to fill the previous user message from this session into the input; double-press <kbd>ArrowDown</kbd> to move forward, restoring the draft you had before entering history. Single presses, long presses, <kbd>Shift</kbd>+arrows, IME composition, and open slash menus are left untouched.
 
-**Install.**
+**Install.** Published on npm as [`dsh-input-history-recall`](https://www.npmjs.com/package/dsh-input-history-recall).
 
 ```powershell
 cd "$env:USERPROFILE\.dsh\profiles\desktop"
-npm install github:foreverbelief/dsh-input-history-recall
+npm install dsh-input-history-recall
 ```
 
 Add `"dsh-input-history-recall"` to `dsh.profile.bundles` in the same `package.json`, then restart DSH. The package ships its own `cordis.patch.yml`, so do not insert the row manually.

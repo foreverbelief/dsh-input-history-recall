@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-11-18
+
+- 发布到 npm：`npm install dsh-input-history-recall`，README 补充 npm 徽章与安装方式。
+- 无功能变更。
+
 ## 0.1.0 — 2026-09-08
 
 首个公开版本。

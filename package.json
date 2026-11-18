@@ -1,6 +1,6 @@
 {
   "name": "dsh-input-history-recall",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Double-press ArrowUp/ArrowDown in the DeepSeek Harness Web composer to recall this session's sent messages.",
   "keywords": [
     "dsh",
